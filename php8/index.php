@@ -1,31 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<?php
 
-	<title>Contatos</title>
-</head>
-<body>
+// Aqui são as variaveis
+$nome = 'Hugo Vasconcelos';
+$sobrenome = 'Freitas';
+$idade = 26;
+$numero = 5;
+$mediaIdade = 30;
 
-	<div class="container">
-		<form method="POST" action="enviar.php">
-			<div class="mb-3">
-				<label for="exampleFormControlInput1" class="form-label">Nome</label>
-				<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Insira seu Nome" name="nome">
-			</div>
-			<div class="mb-3">
-				<label for="exampleFormControlInput1" class="form-label">Email</label>
-				<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
-			</div>
-			<div class="mb-3">
-				<label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
-				<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensagem"></textarea>
-			</div>
+//echo $idade .'<br>';
+echo $nome . ' ' . $sobrenome . ' e a sua idade é ' .$idade;
 
-			<input type="submit" class="btn btn-primary" id="exampleFormControlInput1" value="Enviar">
+$total = $idade + $numero;
+echo '<p>' .$total;
 
-		</form>
-	</div>
+//TOMADAS DE DECISÃO IF
+if($idade > $mediaIdade){
+	echo '<p> Idade Maior que '. $mediaIdade;
+}else if($idade == 27){
+	echo '<p> Idade igua a 27 anos <p>';
+}else{
+	echo '<p> Idade não é maior que ' . $mediaIdade . ' e também não igual a 27 anos <p>';
+}
 
-</body>
-</html>
+
+//LAÇOS DE REPETIÇÃO
+for($i=0; $i <= $numero; $i++){
+
+	echo '<br> o valor de i é '.$i;
+	
+	if($i == 3){
+		echo '<p>Contador é 3<p>';
+	}
+	
+}
+
+
+?>
